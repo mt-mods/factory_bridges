@@ -1,13 +1,13 @@
 minetest.register_craft({output = FB.NAME..":i00 200",
 	recipe ={
 		{	"",			"",			"default:steel_ingot",	},
-		{	"",			"default:steel_ingot",	"",			},
+		{	"",			"",	"",			},
 		{	"default:steel_ingot",	"",			"",			},
 	},
 })
 minetest.register_craft({output = FB.NAME..":i01 350",
 	recipe ={
-		{	"default:steel_ingot",	"default:steel_ingot", "",			},
+		{	"default:steel_ingot",	"default:steel_ingot", "default:stick",			},
 	},
 })
 minetest.register_craft({output = FB.NAME..":i02",
