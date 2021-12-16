@@ -35,6 +35,13 @@ minetest.register_craft({output = FB.NAME..":a05",
 		{	"",			"",			"",			},
 	},
 })
+minetest.register_craft({output = FB.NAME..":a05dia",
+	recipe ={
+		{	FB.NAME..":a05",	"",					"",			},
+		{	"",					FB.NAME..":a05",	"",	},
+		{	"",					"",					FB.NAME..":a05",			},
+	},
+})
 minetest.register_craft({output = FB.NAME..":a13",
 	recipe ={
 		{	"",			FB.NAME..":i02",	FB.NAME..":i00",	},

@@ -4,6 +4,7 @@ a02 = Railing & pole (set 2)
 a03 = Railing & pole (set 3)
 a04 = Railing & pole (set 4)
 a05 = Railing & pole (set 5)
+a05dia = Railing & pole (set 5) diagonal
 a06 = Railing & pole (set 6)
 a07 = Railing & pole (set 7)
 a08 = Railing & pole (set 8)

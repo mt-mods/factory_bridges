@@ -43,6 +43,15 @@ minetest.register_node(FB.NAME..":a05", {
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.A05},
 })
+minetest.register_node(FB.NAME..":a05dia", {
+	description = FB.LOCAL("a05dia"),
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 2},
+	tiles = {FB.NAME.."_00.png"},
+	node_box = {type = "fixed", fixed = FB.MODELS.A05DIA},
+})
 minetest.register_node(FB.NAME..":a06", {
 	description = FB.LOCAL("a06"),
 	drawtype = "nodebox",

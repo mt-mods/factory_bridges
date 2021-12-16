@@ -4,6 +4,7 @@ a02 = Garde-corps et poteau (version 2)
 a03 = Garde-corps et poteau (version3)
 a04 = Garde-corps et poteau (version de 4)
 a05 = Garde-corps et poteau (version 5)
+a05dia = Garde-corps et poteau (version 5) diagonale
 a06 = Garde-corps et poteau (version 6)
 a07 = Garde-corps et poteau (version 7)
 a08 = Garde-corps et poteau (version 8)
