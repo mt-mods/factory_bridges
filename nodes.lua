@@ -80,7 +80,6 @@ minetest.register_node(FB.NAME..":a09", {
 	node_box = {type = "fixed", fixed = FB.MODELS.A09},
 })
 minetest.register_node(FB.NAME..":a10", {
-	description = FB.LOCAL("a10"),
 	description = "Steel railing",
 	drawtype = "nodebox",
 	paramtype = "light",
@@ -298,7 +297,7 @@ minetest.register_node(FB.NAME..":d00", {
 	groups = {cracky = 2},
 	tiles = {FB.NAME.."_03.png", FB.NAME.."_03.png", FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.D00},
-	on_rightclick = function(pos, node, player, itemstack, pointed_thing)
+	on_rightclick = function(pos, node)
 		minetest.set_node(pos, {name=FB.NAME..":d01", param2=node.param2})
 	end,
 })
@@ -310,7 +309,7 @@ minetest.register_node(FB.NAME..":d01", {
 	groups = {cracky=2, not_in_creative_inventory = 1},
 	tiles = {FB.NAME.."_03.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.D01},
-	on_rightclick = function(pos, node, player, itemstack, pointed_thing)
+	on_rightclick = function(pos, node)
 		minetest.set_node(pos, {name=FB.NAME..":d00", param2=node.param2})
 	end,
 	drop = FB.NAME..":d00",
