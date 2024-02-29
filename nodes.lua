@@ -4,6 +4,7 @@ minetest.register_node(FB.NAME..":a01", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.A01},
 })
@@ -13,6 +14,7 @@ minetest.register_node(FB.NAME..":a02", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.A02},
 })
@@ -22,6 +24,7 @@ minetest.register_node(FB.NAME..":a03", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.A03},
 })
@@ -31,6 +34,7 @@ minetest.register_node(FB.NAME..":a04", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.A04},
 })
@@ -40,6 +44,7 @@ minetest.register_node(FB.NAME..":a05", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.A05},
 })
@@ -49,6 +54,7 @@ minetest.register_node(FB.NAME..":a05dia", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.A05DIA},
 })
@@ -58,6 +64,7 @@ minetest.register_node(FB.NAME..":a06", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.A06},
 })
@@ -67,6 +74,7 @@ minetest.register_node(FB.NAME..":a07", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.A07},
 })
@@ -76,6 +84,7 @@ minetest.register_node(FB.NAME..":a08", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.A08},
 })
@@ -85,6 +94,7 @@ minetest.register_node(FB.NAME..":a09", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.A09},
 })
@@ -94,6 +104,7 @@ minetest.register_node(FB.NAME..":a10", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.A10},
 })
@@ -103,6 +114,7 @@ minetest.register_node(FB.NAME..":a11", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.A11},
 })
@@ -112,6 +124,7 @@ minetest.register_node(FB.NAME..":a12", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.A12},
 })
@@ -121,6 +134,7 @@ minetest.register_node(FB.NAME..":a13", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.A13},
 })
@@ -130,6 +144,7 @@ minetest.register_node(FB.NAME..":a14", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.A14},
 })
@@ -139,6 +154,7 @@ minetest.register_node(FB.NAME..":a15", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.A15},
 })
@@ -149,6 +165,7 @@ minetest.register_node(FB.NAME..":b00", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_01.png", FB.NAME.."_01.png", FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.B00},
 })
@@ -158,6 +175,7 @@ minetest.register_node(FB.NAME..":b01", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_01.png", FB.NAME.."_01.png", FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.B01},
 })
@@ -167,6 +185,7 @@ minetest.register_node(FB.NAME..":b02", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_01.png", FB.NAME.."_01.png", FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.B02},
 })
@@ -176,6 +195,7 @@ minetest.register_node(FB.NAME..":b03", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_01.png", FB.NAME.."_01.png", FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.B03},
 })
@@ -185,6 +205,7 @@ minetest.register_node(FB.NAME..":b04", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_01.png", FB.NAME.."_01.png", FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.B04},
 })
@@ -194,6 +215,7 @@ minetest.register_node(FB.NAME..":b05", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_01.png", FB.NAME.."_01.png", FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.B05},
 })
@@ -203,6 +225,7 @@ minetest.register_node(FB.NAME..":b06", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_01.png", FB.NAME.."_01.png", FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.B06},
 })
@@ -212,6 +235,7 @@ minetest.register_node(FB.NAME..":b07", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_01.png", FB.NAME.."_01.png", FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.B07},
 })
@@ -221,6 +245,7 @@ minetest.register_node(FB.NAME..":b08", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_01.png", FB.NAME.."_01.png", FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.B08},
 })
@@ -230,6 +255,7 @@ minetest.register_node(FB.NAME..":b09", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_01.png", FB.NAME.."_01.png", FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.B09},
 })
@@ -239,6 +265,7 @@ minetest.register_node(FB.NAME..":b10", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_01.png", FB.NAME.."_01.png", FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.B10},
 })
@@ -248,6 +275,7 @@ minetest.register_node(FB.NAME..":b11", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_01.png", FB.NAME.."_01.png", FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.B11},
 })
@@ -257,6 +285,7 @@ minetest.register_node(FB.NAME..":b12", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_01.png", FB.NAME.."_01.png", FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.B12},
 })
@@ -267,6 +296,7 @@ minetest.register_node(FB.NAME..":c00", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_02.png", FB.NAME.."_02.png", FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.C00},
 })
@@ -276,6 +306,7 @@ minetest.register_node(FB.NAME..":c01", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_02.png", FB.NAME.."_02.png", FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.C01},
 })
@@ -285,6 +316,7 @@ minetest.register_node(FB.NAME..":c02", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_02.png", FB.NAME.."_02.png", FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.C02},
 })
@@ -294,6 +326,7 @@ minetest.register_node(FB.NAME..":c03", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_02.png", FB.NAME.."_02.png", FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.C03},
 })
@@ -304,6 +337,7 @@ minetest.register_node(FB.NAME..":d00", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_03.png", FB.NAME.."_03.png", FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.D00},
 	on_rightclick = function(pos, node)
@@ -316,6 +350,7 @@ minetest.register_node(FB.NAME..":d01", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky=2, not_in_creative_inventory = 1},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_03.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.D01},
 	on_rightclick = function(pos, node)
@@ -331,6 +366,7 @@ minetest.register_node(FB.NAME..":s00", {
 	paramtype2 = "facedir",
 	climbable = true,
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.S00},
 })
@@ -341,6 +377,7 @@ minetest.register_node(FB.NAME..":s01", {
 	paramtype2 = "facedir",
 	climbable = true,
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.S01},
 })
@@ -350,6 +387,7 @@ minetest.register_node(FB.NAME..":s02", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.S02},
 })
@@ -360,6 +398,7 @@ minetest.register_node(FB.NAME..":s03", {
 	paramtype2 = "facedir",
 	climbable = true,
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.S03},
 })
@@ -370,6 +409,7 @@ minetest.register_node(FB.NAME..":s04", {
 	paramtype2 = "facedir",
 	climbable = true,
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.S04},
 })
@@ -380,6 +420,7 @@ minetest.register_node(FB.NAME..":s05", {
 	paramtype2 = "facedir",
 	climbable = true,
 	groups = {cracky = 2},
+	is_ground_content = false,
 	tiles = {FB.NAME.."_00.png"},
 	node_box = {type = "fixed", fixed = FB.MODELS.S05},
 })
