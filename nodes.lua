@@ -1,5 +1,7 @@
+local S = core.get_translator(FB.NAME)
+
 core.register_node(FB.NAME .. ":a01", {
-	description = FB.LOCAL("a01"),
+	description = S("Railing & pole (set 1)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -9,7 +11,7 @@ core.register_node(FB.NAME .. ":a01", {
 	node_box = { type = "fixed", fixed = FB.MODELS.A01 },
 })
 core.register_node(FB.NAME .. ":a02", {
-	description = FB.LOCAL("a02"),
+	description = S("Railing & pole (set 2)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -19,7 +21,7 @@ core.register_node(FB.NAME .. ":a02", {
 	node_box = { type = "fixed", fixed = FB.MODELS.A02 },
 })
 core.register_node(FB.NAME .. ":a03", {
-	description = FB.LOCAL("a03"),
+	description = S("Railing & pole (set 3)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -29,7 +31,7 @@ core.register_node(FB.NAME .. ":a03", {
 	node_box = { type = "fixed", fixed = FB.MODELS.A03 },
 })
 core.register_node(FB.NAME .. ":a04", {
-	description = FB.LOCAL("a04"),
+	description = S("Railing & pole (set 4)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -39,7 +41,7 @@ core.register_node(FB.NAME .. ":a04", {
 	node_box = { type = "fixed", fixed = FB.MODELS.A04 },
 })
 core.register_node(FB.NAME .. ":a05", {
-	description = FB.LOCAL("a05"),
+	description = S("Railing & pole (set 5)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -49,7 +51,7 @@ core.register_node(FB.NAME .. ":a05", {
 	node_box = { type = "fixed", fixed = FB.MODELS.A05 },
 })
 core.register_node(FB.NAME .. ":a05dia", {
-	description = FB.LOCAL("a05dia"),
+	description = S("Railing & pole (set 5) diagonal"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -59,7 +61,7 @@ core.register_node(FB.NAME .. ":a05dia", {
 	node_box = { type = "fixed", fixed = FB.MODELS.A05DIA },
 })
 core.register_node(FB.NAME .. ":a06", {
-	description = FB.LOCAL("a06"),
+	description = S("Railing & pole (set 6)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -69,7 +71,7 @@ core.register_node(FB.NAME .. ":a06", {
 	node_box = { type = "fixed", fixed = FB.MODELS.A06 },
 })
 core.register_node(FB.NAME .. ":a07", {
-	description = FB.LOCAL("a07"),
+	description = S("Railing & pole (set 7)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -79,7 +81,7 @@ core.register_node(FB.NAME .. ":a07", {
 	node_box = { type = "fixed", fixed = FB.MODELS.A07 },
 })
 core.register_node(FB.NAME .. ":a08", {
-	description = FB.LOCAL("a08"),
+	description = S("Railing & pole (set 8)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -89,7 +91,7 @@ core.register_node(FB.NAME .. ":a08", {
 	node_box = { type = "fixed", fixed = FB.MODELS.A08 },
 })
 core.register_node(FB.NAME .. ":a09", {
-	description = FB.LOCAL("a09"),
+	description = S("Railing & pole (set 9)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -99,7 +101,7 @@ core.register_node(FB.NAME .. ":a09", {
 	node_box = { type = "fixed", fixed = FB.MODELS.A09 },
 })
 core.register_node(FB.NAME .. ":a10", {
-	description = "Steel railing",
+	description = S("Railing & pole (set 10)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -109,7 +111,7 @@ core.register_node(FB.NAME .. ":a10", {
 	node_box = { type = "fixed", fixed = FB.MODELS.A10 },
 })
 core.register_node(FB.NAME .. ":a11", {
-	description = FB.LOCAL("a11"),
+	description = S("Railing & pole (set 11)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -119,7 +121,7 @@ core.register_node(FB.NAME .. ":a11", {
 	node_box = { type = "fixed", fixed = FB.MODELS.A11 },
 })
 core.register_node(FB.NAME .. ":a12", {
-	description = FB.LOCAL("a12"),
+	description = S("Railing & pole (set 12)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -129,7 +131,7 @@ core.register_node(FB.NAME .. ":a12", {
 	node_box = { type = "fixed", fixed = FB.MODELS.A12 },
 })
 core.register_node(FB.NAME .. ":a13", {
-	description = FB.LOCAL("a13"),
+	description = S("Railing & pole (set 13)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -139,7 +141,7 @@ core.register_node(FB.NAME .. ":a13", {
 	node_box = { type = "fixed", fixed = FB.MODELS.A13 },
 })
 core.register_node(FB.NAME .. ":a14", {
-	description = FB.LOCAL("a14"),
+	description = S("Railing & pole (set 14)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -149,7 +151,7 @@ core.register_node(FB.NAME .. ":a14", {
 	node_box = { type = "fixed", fixed = FB.MODELS.A14 },
 })
 core.register_node(FB.NAME .. ":a15", {
-	description = FB.LOCAL("a15"),
+	description = S("Railing & pole (set 15)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -160,7 +162,7 @@ core.register_node(FB.NAME .. ":a15", {
 })
 
 core.register_node(FB.NAME .. ":b00", {
-	description = FB.LOCAL("b00"),
+	description = S("Steel slab"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -170,7 +172,7 @@ core.register_node(FB.NAME .. ":b00", {
 	node_box = { type = "fixed", fixed = FB.MODELS.B00 },
 })
 core.register_node(FB.NAME .. ":b01", {
-	description = FB.LOCAL("b01"),
+	description = S("Steel slab with railing (version 1)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -180,7 +182,7 @@ core.register_node(FB.NAME .. ":b01", {
 	node_box = { type = "fixed", fixed = FB.MODELS.B01 },
 })
 core.register_node(FB.NAME .. ":b02", {
-	description = FB.LOCAL("b02"),
+	description = S("Steel slab with railing (version 2)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -190,7 +192,7 @@ core.register_node(FB.NAME .. ":b02", {
 	node_box = { type = "fixed", fixed = FB.MODELS.B02 },
 })
 core.register_node(FB.NAME .. ":b03", {
-	description = FB.LOCAL("b03"),
+	description = S("Steel slab with railing (version 3)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -200,7 +202,7 @@ core.register_node(FB.NAME .. ":b03", {
 	node_box = { type = "fixed", fixed = FB.MODELS.B03 },
 })
 core.register_node(FB.NAME .. ":b04", {
-	description = FB.LOCAL("b04"),
+	description = S("Steel slab with railing (version 4)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -210,7 +212,7 @@ core.register_node(FB.NAME .. ":b04", {
 	node_box = { type = "fixed", fixed = FB.MODELS.B04 },
 })
 core.register_node(FB.NAME .. ":b05", {
-	description = FB.LOCAL("b05"),
+	description = S("Steel slab with railing (version 5)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -220,7 +222,7 @@ core.register_node(FB.NAME .. ":b05", {
 	node_box = { type = "fixed", fixed = FB.MODELS.B05 },
 })
 core.register_node(FB.NAME .. ":b06", {
-	description = FB.LOCAL("b06"),
+	description = S("Steel slab with railing (version 6)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -230,7 +232,7 @@ core.register_node(FB.NAME .. ":b06", {
 	node_box = { type = "fixed", fixed = FB.MODELS.B06 },
 })
 core.register_node(FB.NAME .. ":b07", {
-	description = FB.LOCAL("b07"),
+	description = S("Steel slab with railing (version 7)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -240,7 +242,7 @@ core.register_node(FB.NAME .. ":b07", {
 	node_box = { type = "fixed", fixed = FB.MODELS.B07 },
 })
 core.register_node(FB.NAME .. ":b08", {
-	description = FB.LOCAL("b08"),
+	description = S("Steel slab with railing (version 8)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -250,7 +252,7 @@ core.register_node(FB.NAME .. ":b08", {
 	node_box = { type = "fixed", fixed = FB.MODELS.B08 },
 })
 core.register_node(FB.NAME .. ":b09", {
-	description = FB.LOCAL("b09"),
+	description = S("Steel slab with railing (version 9)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -260,7 +262,7 @@ core.register_node(FB.NAME .. ":b09", {
 	node_box = { type = "fixed", fixed = FB.MODELS.B09 },
 })
 core.register_node(FB.NAME .. ":b10", {
-	description = FB.LOCAL("b10"),
+	description = S("Steel slab with railing (version 10)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -270,7 +272,7 @@ core.register_node(FB.NAME .. ":b10", {
 	node_box = { type = "fixed", fixed = FB.MODELS.B10 },
 })
 core.register_node(FB.NAME .. ":b11", {
-	description = FB.LOCAL("b11"),
+	description = S("Steel slab with railing (version 11)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -280,7 +282,7 @@ core.register_node(FB.NAME .. ":b11", {
 	node_box = { type = "fixed", fixed = FB.MODELS.B11 },
 })
 core.register_node(FB.NAME .. ":b12", {
-	description = FB.LOCAL("b12"),
+	description = S("Steel slab with railing (version 12)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -291,7 +293,7 @@ core.register_node(FB.NAME .. ":b12", {
 })
 
 core.register_node(FB.NAME .. ":c00", {
-	description = FB.LOCAL("c00"),
+	description = S("Steel stair"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -301,7 +303,7 @@ core.register_node(FB.NAME .. ":c00", {
 	node_box = { type = "fixed", fixed = FB.MODELS.C00 },
 })
 core.register_node(FB.NAME .. ":c01", {
-	description = FB.LOCAL("c01"),
+	description = S("Steel stair with left railing"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -311,7 +313,7 @@ core.register_node(FB.NAME .. ":c01", {
 	node_box = { type = "fixed", fixed = FB.MODELS.C01 },
 })
 core.register_node(FB.NAME .. ":c02", {
-	description = FB.LOCAL("c02"),
+	description = S("Steel stair with right railing"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -321,7 +323,7 @@ core.register_node(FB.NAME .. ":c02", {
 	node_box = { type = "fixed", fixed = FB.MODELS.C02 },
 })
 core.register_node(FB.NAME .. ":c03", {
-	description = FB.LOCAL("c03"),
+	description = S("Steel stair with double railing"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -332,7 +334,7 @@ core.register_node(FB.NAME .. ":c03", {
 })
 
 core.register_node(FB.NAME .. ":d00", {
-	description = FB.LOCAL("d00"),
+	description = S("Steel trapdoor"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -345,7 +347,7 @@ core.register_node(FB.NAME .. ":d00", {
 	end,
 })
 core.register_node(FB.NAME .. ":d01", {
-	description = FB.LOCAL("d01"),
+	description = S("Steel trapdoor (open)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -360,7 +362,7 @@ core.register_node(FB.NAME .. ":d01", {
 })
 
 core.register_node(FB.NAME .. ":s00", {
-	description = FB.LOCAL("s00"),
+	description = S("Steel ladder"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -371,7 +373,7 @@ core.register_node(FB.NAME .. ":s00", {
 	node_box = { type = "fixed", fixed = FB.MODELS.S00 },
 })
 core.register_node(FB.NAME .. ":s01", {
-	description = FB.LOCAL("s01"),
+	description = S("Steel ladder with railing"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -382,7 +384,7 @@ core.register_node(FB.NAME .. ":s01", {
 	node_box = { type = "fixed", fixed = FB.MODELS.S01 },
 })
 core.register_node(FB.NAME .. ":s02", {
-	description = FB.LOCAL("s02"),
+	description = S("Steel ladder with railing (exit)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -392,7 +394,7 @@ core.register_node(FB.NAME .. ":s02", {
 	node_box = { type = "fixed", fixed = FB.MODELS.S02 },
 })
 core.register_node(FB.NAME .. ":s03", {
-	description = FB.LOCAL("s03"),
+	description = S("Steel ladder with railing (right-exit)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -403,7 +405,7 @@ core.register_node(FB.NAME .. ":s03", {
 	node_box = { type = "fixed", fixed = FB.MODELS.S03 },
 })
 core.register_node(FB.NAME .. ":s04", {
-	description = FB.LOCAL("s04"),
+	description = S("Steel ladder with railing (left-exit)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -414,7 +416,7 @@ core.register_node(FB.NAME .. ":s04", {
 	node_box = { type = "fixed", fixed = FB.MODELS.S04 },
 })
 core.register_node(FB.NAME .. ":s05", {
-	description = FB.LOCAL("s05"),
+	description = S("Steel ladder with railing (double-exit)"),
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -425,6 +427,6 @@ core.register_node(FB.NAME .. ":s05", {
 	node_box = { type = "fixed", fixed = FB.MODELS.S05 },
 })
 
--- переименование нодов из старой версии
+-- renaming nodes from old version
 core.register_alias(FB.NAME .. ":a00", FB.NAME .. ":a01")
 core.register_alias(FB.NAME .. ":s06", FB.NAME .. ":c03")

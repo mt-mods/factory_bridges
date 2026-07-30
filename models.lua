@@ -1,73 +1,73 @@
-local s = { l = -0.5, m = 0, h = 0.5, s = 0.01 } -- размеры
-local e = {} -- элементы
+local s = { l = -0.5, m = 0, h = 0.5, s = 0.01 } -- sizes
+local e = {} -- elements
 --			x_min		y_min		z_min		x_max		y_max		z2_max
 --		{	s.l+000*s.s,	s.l+000*s.s,	s.l+000*s.s,	s.h-000*s.s,	s.h-000*s.s,	s.h-000*s.s,	},	--e.[0]
 e.a = { -- 1 x 1 x 0.03
-	{ s.l + 000 * s.s, s.l + 000 * s.s, s.l + 000 * s.s, s.h - 000 * s.s, s.l + 003 * s.s, s.h - 000 * s.s }, --e.a[01] нижняя плита
+	{ s.l + 000 * s.s, s.l + 000 * s.s, s.l + 000 * s.s, s.h - 000 * s.s, s.l + 003 * s.s, s.h - 000 * s.s }, --e.a[01] bottom slab
 }
 e.b = { -- 1 x 0.5 x 0.03
-	{ s.l + 000 * s.s, s.l + 000 * s.s, s.l + 000 * s.s, s.h - 000 * s.s, s.l + 003 * s.s, s.m + 000 * s.s }, --e.b[01] нижняя ступенька
-	{ s.l + 000 * s.s, s.m + 000 * s.s, s.m + 000 * s.s, s.h - 000 * s.s, s.m + 003 * s.s, s.h - 000 * s.s }, --e.b[02] верхняя ступенька
+	{ s.l + 000 * s.s, s.l + 000 * s.s, s.l + 000 * s.s, s.h - 000 * s.s, s.l + 003 * s.s, s.m + 000 * s.s }, --e.b[01] lower step
+	{ s.l + 000 * s.s, s.m + 000 * s.s, s.m + 000 * s.s, s.h - 000 * s.s, s.m + 003 * s.s, s.h - 000 * s.s }, --e.b[02] upper step
 }
 e.c = { -- 0.44 x 0.44 x 0.03
-	{ s.l + 006 * s.s, s.l + 000 * s.s, s.l + 006 * s.s, s.h - 006 * s.s, s.l + 003 * s.s, s.h - 006 * s.s }, --e.c[01] крышка люка (закрытая)
-	{ s.l + 006 * s.s, s.l + 006 * s.s, s.h - 006 * s.s, s.h - 006 * s.s, s.h - 006 * s.s, s.h - 003 * s.s }, --e.c[02] крышка люка (открытая)
+	{ s.l + 006 * s.s, s.l + 000 * s.s, s.l + 006 * s.s, s.h - 006 * s.s, s.l + 003 * s.s, s.h - 006 * s.s }, --e.c[01] trapdoor cover (closed)
+	{ s.l + 006 * s.s, s.l + 006 * s.s, s.h - 006 * s.s, s.h - 006 * s.s, s.h - 006 * s.s, s.h - 003 * s.s }, --e.c[02] trapdoor cover (open)
 }
 e.d = { -- 1 x 0.06 x 0.03
-	{ s.l + 000 * s.s, s.l + 000 * s.s, s.h - 006 * s.s, s.h - 000 * s.s, s.l + 003 * s.s, s.h - 000 * s.s }, --e.d[01] борт люка дальний
-	{ s.h - 006 * s.s, s.l + 000 * s.s, s.l + 000 * s.s, s.h - 000 * s.s, s.l + 003 * s.s, s.h - 000 * s.s }, --e.d[02] борт люка правый
-	{ s.l + 000 * s.s, s.l + 000 * s.s, s.l + 000 * s.s, s.h - 000 * s.s, s.l + 003 * s.s, s.l + 006 * s.s }, --e.d[03] борт люка ближний
-	{ s.l + 000 * s.s, s.l + 000 * s.s, s.l + 000 * s.s, s.l + 006 * s.s, s.l + 003 * s.s, s.h - 000 * s.s }, --e.d[04] борт люка левый
-	{ s.l + 000 * s.s, s.h - 003 * s.s, s.h - 006 * s.s, s.h - 000 * s.s, s.h - 000 * s.s, s.h - 000 * s.s }, --e.d[05] поручень дальний
-	{ s.h - 006 * s.s, s.h - 003 * s.s, s.l + 000 * s.s, s.h - 000 * s.s, s.h - 000 * s.s, s.h - 000 * s.s }, --e.d[06] поручень правый
-	{ s.l + 000 * s.s, s.h - 003 * s.s, s.l + 000 * s.s, s.h - 000 * s.s, s.h - 000 * s.s, s.l + 006 * s.s }, --e.d[07] поручень ближний
-	{ s.l + 000 * s.s, s.h - 003 * s.s, s.l + 000 * s.s, s.l + 006 * s.s, s.h - 000 * s.s, s.h - 000 * s.s }, --e.d[08] поручень левый
-	{ s.l + 000 * s.s, s.l + 000 * s.s, s.h - 006 * s.s, s.l + 003 * s.s, s.h - 000 * s.s, s.h - 000 * s.s }, --e.d[09] левая дальняя стойка (для вертикальных лестниц)
-	{ s.h - 003 * s.s, s.l + 000 * s.s, s.h - 006 * s.s, s.h + 000 * s.s, s.h - 000 * s.s, s.h - 000 * s.s }, --e.d[10] правая дальняя стойка (для вертикальных лестниц)
-	{ s.l + 000 * s.s, s.l + 000 * s.s, s.m + 000 * s.s, s.l + 003 * s.s, s.h - 000 * s.s, s.m - 006 * s.s }, --e.d[11] левая ближняя стойка (для вертикальных лестниц)
-	{ s.h - 003 * s.s, s.l + 000 * s.s, s.m + 000 * s.s, s.h + 000 * s.s, s.h - 000 * s.s, s.m - 006 * s.s }, --e.d[12] правая ближняя стойка (для вертикальных лестниц)
-	{ s.m - 003 * s.s, s.l + 000 * s.s, s.l + 000 * s.s, s.m + 003 * s.s, s.h - 000 * s.s, s.l + 003 * s.s }, --e.d[13] центральная ближняя стойка (для вертикальных лестниц)
-	{ s.l + 003 * s.s, s.l + 022 * s.s, s.l + 003 * s.s, s.l + 006 * s.s, s.l + 028 * s.s, s.h - 000 * s.s }, --e.d[14] (для вертикальных лестниц)
-	{ s.l + 003 * s.s, s.h - 028 * s.s, s.l + 003 * s.s, s.l + 006 * s.s, s.h - 022 * s.s, s.h - 000 * s.s }, --e.d[15] (для вертикальных лестниц)
-	{ s.h - 006 * s.s, s.l + 022 * s.s, s.l + 003 * s.s, s.h - 003 * s.s, s.l + 028 * s.s, s.h - 000 * s.s }, --e.d[16] (для вертикальных лестниц)
-	{ s.h - 006 * s.s, s.h - 028 * s.s, s.l + 003 * s.s, s.h - 003 * s.s, s.h - 022 * s.s, s.h - 000 * s.s }, --e.d[17] (для вертикальных лестниц)
-	{ s.l + 003 * s.s, s.l + 022 * s.s, s.l + 003 * s.s, s.h - 003 * s.s, s.l + 028 * s.s, s.l + 006 * s.s }, --e.d[18] (для вертикальных лестниц)
-	{ s.l + 003 * s.s, s.h - 028 * s.s, s.l + 003 * s.s, s.h - 003 * s.s, s.h - 022 * s.s, s.l + 006 * s.s }, --e.d[19] (для вертикальных лестниц)
+	{ s.l + 000 * s.s, s.l + 000 * s.s, s.h - 006 * s.s, s.h - 000 * s.s, s.l + 003 * s.s, s.h - 000 * s.s }, --e.d[01] far trapdoor edge
+	{ s.h - 006 * s.s, s.l + 000 * s.s, s.l + 000 * s.s, s.h - 000 * s.s, s.l + 003 * s.s, s.h - 000 * s.s }, --e.d[02] right trapdoor edge
+	{ s.l + 000 * s.s, s.l + 000 * s.s, s.l + 000 * s.s, s.h - 000 * s.s, s.l + 003 * s.s, s.l + 006 * s.s }, --e.d[03] near trapdoor edge
+	{ s.l + 000 * s.s, s.l + 000 * s.s, s.l + 000 * s.s, s.l + 006 * s.s, s.l + 003 * s.s, s.h - 000 * s.s }, --e.d[04] left trapdoor edge
+	{ s.l + 000 * s.s, s.h - 003 * s.s, s.h - 006 * s.s, s.h - 000 * s.s, s.h - 000 * s.s, s.h - 000 * s.s }, --e.d[05] far handrail
+	{ s.h - 006 * s.s, s.h - 003 * s.s, s.l + 000 * s.s, s.h - 000 * s.s, s.h - 000 * s.s, s.h - 000 * s.s }, --e.d[06] right handrail
+	{ s.l + 000 * s.s, s.h - 003 * s.s, s.l + 000 * s.s, s.h - 000 * s.s, s.h - 000 * s.s, s.l + 006 * s.s }, --e.d[07] near handrail
+	{ s.l + 000 * s.s, s.h - 003 * s.s, s.l + 000 * s.s, s.l + 006 * s.s, s.h - 000 * s.s, s.h - 000 * s.s }, --e.d[08] left handrail
+	{ s.l + 000 * s.s, s.l + 000 * s.s, s.h - 006 * s.s, s.l + 003 * s.s, s.h - 000 * s.s, s.h - 000 * s.s }, --e.d[09] far left pillar (for vertical ladders)
+	{ s.h - 003 * s.s, s.l + 000 * s.s, s.h - 006 * s.s, s.h + 000 * s.s, s.h - 000 * s.s, s.h - 000 * s.s }, --e.d[10] far right pillar (for vertical ladders)
+	{ s.l + 000 * s.s, s.l + 000 * s.s, s.m + 000 * s.s, s.l + 003 * s.s, s.h - 000 * s.s, s.m - 006 * s.s }, --e.d[11] near left pillar (for vertical ladders)
+	{ s.h - 003 * s.s, s.l + 000 * s.s, s.m + 000 * s.s, s.h + 000 * s.s, s.h - 000 * s.s, s.m - 006 * s.s }, --e.d[12] near right pillar (for vertical ladders)
+	{ s.m - 003 * s.s, s.l + 000 * s.s, s.l + 000 * s.s, s.m + 003 * s.s, s.h - 000 * s.s, s.l + 003 * s.s }, --e.d[13] near center pillar (for vertical ladders)
+	{ s.l + 003 * s.s, s.l + 022 * s.s, s.l + 003 * s.s, s.l + 006 * s.s, s.l + 028 * s.s, s.h - 000 * s.s }, --e.d[14] (for vertical ladders)
+	{ s.l + 003 * s.s, s.h - 028 * s.s, s.l + 003 * s.s, s.l + 006 * s.s, s.h - 022 * s.s, s.h - 000 * s.s }, --e.d[15] (for vertical ladders)
+	{ s.h - 006 * s.s, s.l + 022 * s.s, s.l + 003 * s.s, s.h - 003 * s.s, s.l + 028 * s.s, s.h - 000 * s.s }, --e.d[16] (for vertical ladders)
+	{ s.h - 006 * s.s, s.h - 028 * s.s, s.l + 003 * s.s, s.h - 003 * s.s, s.h - 022 * s.s, s.h - 000 * s.s }, --e.d[17] (for vertical ladders)
+	{ s.l + 003 * s.s, s.l + 022 * s.s, s.l + 003 * s.s, s.h - 003 * s.s, s.l + 028 * s.s, s.l + 006 * s.s }, --e.d[18] (for vertical ladders)
+	{ s.l + 003 * s.s, s.h - 028 * s.s, s.l + 003 * s.s, s.h - 003 * s.s, s.h - 022 * s.s, s.l + 006 * s.s }, --e.d[19] (for vertical ladders)
 }
 e.e = { -- 1 x 0.04 x 0.04
-	{ s.l + 001 * s.s, s.l + 000 * s.s, s.h - 005 * s.s, s.l + 005 * s.s, s.h - 000 * s.s, s.h - 001 * s.s }, --e.e[01] стойка угловая левая дальняя
-	{ s.h - 005 * s.s, s.l + 000 * s.s, s.h - 005 * s.s, s.h - 001 * s.s, s.h - 000 * s.s, s.h - 001 * s.s }, --e.e[02] стойка угловая правая дальняя
-	{ s.h - 005 * s.s, s.l + 000 * s.s, s.l + 001 * s.s, s.h - 001 * s.s, s.h - 000 * s.s, s.l + 005 * s.s }, --e.e[03] стойка угловая правая ближняя
-	{ s.l + 001 * s.s, s.l + 000 * s.s, s.l + 001 * s.s, s.l + 005 * s.s, s.h - 000 * s.s, s.l + 005 * s.s }, --e.e[04] стойка угловая левая ближняя
-	{ s.l + 023 * s.s, s.l + 000 * s.s, s.h - 005 * s.s, s.l + 027 * s.s, s.h - 000 * s.s, s.h - 001 * s.s }, --e.e[05] стойка дальняя левая
-	{ s.h - 027 * s.s, s.l + 000 * s.s, s.h - 005 * s.s, s.h - 023 * s.s, s.h - 000 * s.s, s.h - 001 * s.s }, --e.e[06] стойка дальняя правая
-	{ s.h - 005 * s.s, s.l + 000 * s.s, s.l + 023 * s.s, s.h - 001 * s.s, s.h - 000 * s.s, s.l + 027 * s.s }, --e.e[07] стойка правая дальняя
-	{ s.h - 005 * s.s, s.l + 000 * s.s, s.h - 027 * s.s, s.h - 001 * s.s, s.h - 000 * s.s, s.h - 023 * s.s }, --e.e[08] стойка правая ближняя
-	{ s.h - 027 * s.s, s.l + 000 * s.s, s.l + 001 * s.s, s.h - 023 * s.s, s.h - 000 * s.s, s.l + 005 * s.s }, --e.e[09] стойка ближняя правая
-	{ s.l + 023 * s.s, s.l + 000 * s.s, s.l + 001 * s.s, s.l + 027 * s.s, s.h - 000 * s.s, s.l + 005 * s.s }, --e.e[10] стойка ближняя левая
-	{ s.l + 001 * s.s, s.l + 000 * s.s, s.l + 023 * s.s, s.l + 005 * s.s, s.h - 000 * s.s, s.l + 027 * s.s }, --e.e[11] стойка левая ближняя
-	{ s.l + 001 * s.s, s.l + 000 * s.s, s.h - 027 * s.s, s.l + 005 * s.s, s.h - 000 * s.s, s.h - 023 * s.s }, --e.e[12] стойка левая дальняя
-	{ s.l + 000 * s.s, s.l + 023 * s.s, s.h - 005 * s.s, s.h - 000 * s.s, s.l + 027 * s.s, s.h - 001 * s.s }, --e.e[13] перекладина нижняя (для вертикальных лестниц)
-	{ s.l + 000 * s.s, s.h - 027 * s.s, s.h - 005 * s.s, s.h - 000 * s.s, s.h - 023 * s.s, s.h - 001 * s.s }, --e.e[14] перекладина верхняя (для вертикальных лестниц)
+	{ s.l + 001 * s.s, s.l + 000 * s.s, s.h - 005 * s.s, s.l + 005 * s.s, s.h - 000 * s.s, s.h - 001 * s.s }, --e.e[01] far left corner pillar
+	{ s.h - 005 * s.s, s.l + 000 * s.s, s.h - 005 * s.s, s.h - 001 * s.s, s.h - 000 * s.s, s.h - 001 * s.s }, --e.e[02] far right corner pillar
+	{ s.h - 005 * s.s, s.l + 000 * s.s, s.l + 001 * s.s, s.h - 001 * s.s, s.h - 000 * s.s, s.l + 005 * s.s }, --e.e[03] near right corner pillar
+	{ s.l + 001 * s.s, s.l + 000 * s.s, s.l + 001 * s.s, s.l + 005 * s.s, s.h - 000 * s.s, s.l + 005 * s.s }, --e.e[04] near left corner pillar
+	{ s.l + 023 * s.s, s.l + 000 * s.s, s.h - 005 * s.s, s.l + 027 * s.s, s.h - 000 * s.s, s.h - 001 * s.s }, --e.e[05] far left pillar
+	{ s.h - 027 * s.s, s.l + 000 * s.s, s.h - 005 * s.s, s.h - 023 * s.s, s.h - 000 * s.s, s.h - 001 * s.s }, --e.e[06] far right pillar
+	{ s.h - 005 * s.s, s.l + 000 * s.s, s.l + 023 * s.s, s.h - 001 * s.s, s.h - 000 * s.s, s.l + 027 * s.s }, --e.e[07] far right pillar
+	{ s.h - 005 * s.s, s.l + 000 * s.s, s.h - 027 * s.s, s.h - 001 * s.s, s.h - 000 * s.s, s.h - 023 * s.s }, --e.e[08] near right pillar
+	{ s.h - 027 * s.s, s.l + 000 * s.s, s.l + 001 * s.s, s.h - 023 * s.s, s.h - 000 * s.s, s.l + 005 * s.s }, --e.e[09] near right pillar
+	{ s.l + 023 * s.s, s.l + 000 * s.s, s.l + 001 * s.s, s.l + 027 * s.s, s.h - 000 * s.s, s.l + 005 * s.s }, --e.e[10] near left pillar
+	{ s.l + 001 * s.s, s.l + 000 * s.s, s.l + 023 * s.s, s.l + 005 * s.s, s.h - 000 * s.s, s.l + 027 * s.s }, --e.e[11] near left pillar
+	{ s.l + 001 * s.s, s.l + 000 * s.s, s.h - 027 * s.s, s.l + 005 * s.s, s.h - 000 * s.s, s.h - 023 * s.s }, --e.e[12] far left pillar
+	{ s.l + 000 * s.s, s.l + 023 * s.s, s.h - 005 * s.s, s.h - 000 * s.s, s.l + 027 * s.s, s.h - 001 * s.s }, --e.e[13] lower crossbar (for vertical ladders)
+	{ s.l + 000 * s.s, s.h - 027 * s.s, s.h - 005 * s.s, s.h - 000 * s.s, s.h - 023 * s.s, s.h - 001 * s.s }, --e.e[14] upper crossbar (for vertical ladders)
 }
 e.f = { -- 0.06 x 0.06 x 0.03
-	{ s.l + 000 * s.s, s.h - 003 * s.s, s.h - 006 * s.s, s.l + 006 * s.s, s.h - 000 * s.s, s.h - 000 * s.s }, --e.f[01] уголок поручней левый дальний
-	{ s.h - 006 * s.s, s.h - 003 * s.s, s.h - 006 * s.s, s.h - 000 * s.s, s.h - 000 * s.s, s.h - 000 * s.s }, --e.f[02] уголок поручней правый дальний
-	{ s.h - 006 * s.s, s.h - 003 * s.s, s.l + 000 * s.s, s.h - 000 * s.s, s.h - 000 * s.s, s.l + 006 * s.s }, --e.f[03] уголок поручней правый ближний
-	{ s.l + 000 * s.s, s.h - 003 * s.s, s.l + 000 * s.s, s.l + 006 * s.s, s.h - 000 * s.s, s.l + 006 * s.s }, --e.f[04] уголок поручней левый ближний
+	{ s.l + 000 * s.s, s.h - 003 * s.s, s.h - 006 * s.s, s.l + 006 * s.s, s.h - 000 * s.s, s.h - 000 * s.s }, --e.f[01] far left rail bracket
+	{ s.h - 006 * s.s, s.h - 003 * s.s, s.h - 006 * s.s, s.h - 000 * s.s, s.h - 000 * s.s, s.h - 000 * s.s }, --e.f[02] far right rail bracket
+	{ s.h - 006 * s.s, s.h - 003 * s.s, s.l + 000 * s.s, s.h - 000 * s.s, s.h - 000 * s.s, s.l + 006 * s.s }, --e.f[03] near right rail bracket
+	{ s.l + 000 * s.s, s.h - 003 * s.s, s.l + 000 * s.s, s.l + 006 * s.s, s.h - 000 * s.s, s.l + 006 * s.s }, --e.f[04] near left rail bracket
 }
 e.g = { -- 0.06 x 0.03 x 0.03
-	{ s.l + 024 * s.s, s.l + 003 * s.s, s.h - 006 * s.s, s.l + 030 * s.s, s.l + 006 * s.s, s.h - 003 * s.s }, --e.g[01] петля люка левая
-	{ s.h - 030 * s.s, s.l + 003 * s.s, s.h - 006 * s.s, s.h - 024 * s.s, s.l + 006 * s.s, s.h - 003 * s.s }, --e.g[02] петля люка правая
+	{ s.l + 024 * s.s, s.l + 003 * s.s, s.h - 006 * s.s, s.l + 030 * s.s, s.l + 006 * s.s, s.h - 003 * s.s }, --e.g[01] left hinge
+	{ s.h - 030 * s.s, s.l + 003 * s.s, s.h - 006 * s.s, s.h - 024 * s.s, s.l + 006 * s.s, s.h - 003 * s.s }, --e.g[02] right hinge
 }
 e.h = { -- 1.24 x 0.04 x 0.04
-	{ s.l + 001 * s.s, s.l + 000 * s.s, s.l + 023 * s.s, s.l + 005 * s.s, s.h + 024 * s.s, s.l + 027 * s.s }, --e.h[1] стойка левая ближняя (для ступеньки)
-	{ s.l + 001 * s.s, s.m + 000 * s.s, s.h - 027 * s.s, s.l + 005 * s.s, s.h + 075 * s.s, s.h - 023 * s.s }, --e.h[2] стойка левая дальняя (для ступеньки)
-	{ s.h - 001 * s.s, s.l + 000 * s.s, s.l + 023 * s.s, s.h - 005 * s.s, s.h + 024 * s.s, s.l + 027 * s.s }, --e.h[3] стойка правая ближняя (для ступеньки)
-	{ s.h - 001 * s.s, s.m + 000 * s.s, s.h - 027 * s.s, s.h - 005 * s.s, s.h + 075 * s.s, s.h - 023 * s.s }, --e.h[4] стойка правая дальняя (для ступеньки)
+	{ s.l + 001 * s.s, s.l + 000 * s.s, s.l + 023 * s.s, s.l + 005 * s.s, s.h + 024 * s.s, s.l + 027 * s.s }, --e.h[1] near left pillar (for stair)
+	{ s.l + 001 * s.s, s.m + 000 * s.s, s.h - 027 * s.s, s.l + 005 * s.s, s.h + 075 * s.s, s.h - 023 * s.s }, --e.h[2] far left pillar (for stair)
+	{ s.h - 001 * s.s, s.l + 000 * s.s, s.l + 023 * s.s, s.h - 005 * s.s, s.h + 024 * s.s, s.l + 027 * s.s }, --e.h[3] near right pillar (for stair)
+	{ s.h - 001 * s.s, s.m + 000 * s.s, s.h - 027 * s.s, s.h - 005 * s.s, s.h + 075 * s.s, s.h - 023 * s.s }, --e.h[4] far right pillar (for stair)
 }
 e.i = {
-	{ s.l + 000 * s.s, s.h + 000 * s.s, s.l + 000 * s.s, s.l + 006 * s.s, s.h + 003 * s.s, s.l + 003 * s.s }, --e.i[01] левый поручень...
+	{ s.l + 000 * s.s, s.h + 000 * s.s, s.l + 000 * s.s, s.l + 006 * s.s, s.h + 003 * s.s, s.l + 003 * s.s }, --e.i[01] left handrail...
 	{ s.l + 000 * s.s, s.h + 003 * s.s, s.l + 003 * s.s, s.l + 006 * s.s, s.h + 006 * s.s, s.l + 006 * s.s },
 	{ s.l + 000 * s.s, s.h + 006 * s.s, s.l + 006 * s.s, s.l + 006 * s.s, s.h + 009 * s.s, s.l + 009 * s.s },
 	{ s.l + 000 * s.s, s.h + 009 * s.s, s.l + 009 * s.s, s.l + 006 * s.s, s.h + 012 * s.s, s.l + 012 * s.s },
@@ -100,7 +100,7 @@ e.i = {
 	{ s.l + 000 * s.s, s.h + 090 * s.s, s.l + 090 * s.s, s.l + 006 * s.s, s.h + 093 * s.s, s.l + 093 * s.s },
 	{ s.l + 000 * s.s, s.h + 093 * s.s, s.l + 093 * s.s, s.l + 006 * s.s, s.h + 096 * s.s, s.l + 096 * s.s },
 	{ s.l + 000 * s.s, s.h + 096 * s.s, s.l + 096 * s.s, s.l + 006 * s.s, s.h + 100 * s.s, s.l + 100 * s.s }, --e.i[33]
-	{ s.h - 000 * s.s, s.h + 000 * s.s, s.l + 000 * s.s, s.h - 006 * s.s, s.h + 003 * s.s, s.l + 003 * s.s }, --e.i[34] правый поручень...
+	{ s.h - 000 * s.s, s.h + 000 * s.s, s.l + 000 * s.s, s.h - 006 * s.s, s.h + 003 * s.s, s.l + 003 * s.s }, --e.i[34] right handrail...
 	{ s.h - 000 * s.s, s.h + 003 * s.s, s.l + 003 * s.s, s.h - 006 * s.s, s.h + 006 * s.s, s.l + 006 * s.s },
 	{ s.h - 000 * s.s, s.h + 006 * s.s, s.l + 006 * s.s, s.h - 006 * s.s, s.h + 009 * s.s, s.l + 009 * s.s },
 	{ s.h - 000 * s.s, s.h + 009 * s.s, s.l + 009 * s.s, s.h - 006 * s.s, s.h + 012 * s.s, s.l + 012 * s.s },
@@ -135,7 +135,7 @@ e.i = {
 	{ s.h - 000 * s.s, s.h + 096 * s.s, s.l + 096 * s.s, s.h - 006 * s.s, s.h + 100 * s.s, s.l + 100 * s.s }, --e.i[66]
 }
 e.j = {
-	{ s.l + 000 * s.s, s.l + 000 * s.s, s.l + 012 * s.s, s.l + 001 * s.s, s.l + 003 * s.s, s.l + 033 * s.s }, --e.j[01] левое крепление...
+	{ s.l + 000 * s.s, s.l + 000 * s.s, s.l + 012 * s.s, s.l + 001 * s.s, s.l + 003 * s.s, s.l + 033 * s.s }, --e.j[01] left mounting...
 	{ s.l + 000 * s.s, s.l + 003 * s.s, s.l + 015 * s.s, s.l + 001 * s.s, s.l + 006 * s.s, s.l + 035 * s.s },
 	{ s.l + 000 * s.s, s.l + 006 * s.s, s.l + 018 * s.s, s.l + 001 * s.s, s.l + 009 * s.s, s.l + 038 * s.s },
 	{ s.l + 000 * s.s, s.l + 009 * s.s, s.l + 021 * s.s, s.l + 001 * s.s, s.l + 012 * s.s, s.l + 041 * s.s },
@@ -169,7 +169,7 @@ e.j = {
 	{ s.l + 000 * s.s, s.l + 093 * s.s, s.l + 104 * s.s, s.l + 001 * s.s, s.l + 096 * s.s, s.l + 124 * s.s },
 	{ s.l + 000 * s.s, s.l + 096 * s.s, s.l + 107 * s.s, s.l + 001 * s.s, s.l + 099 * s.s, s.l + 127 * s.s },
 	{ s.l + 000 * s.s, s.l + 099 * s.s, s.l + 110 * s.s, s.l + 001 * s.s, s.l + 102 * s.s, s.l + 130 * s.s }, --e.j[34]
-	{ s.h - 000 * s.s, s.l + 000 * s.s, s.l + 012 * s.s, s.h - 001 * s.s, s.l + 003 * s.s, s.l + 033 * s.s }, --e.j[35] правое крепление
+	{ s.h - 000 * s.s, s.l + 000 * s.s, s.l + 012 * s.s, s.h - 001 * s.s, s.l + 003 * s.s, s.l + 033 * s.s }, --e.j[35] right mounting
 	{ s.h - 000 * s.s, s.l + 003 * s.s, s.l + 015 * s.s, s.h - 001 * s.s, s.l + 006 * s.s, s.l + 035 * s.s },
 	{ s.h - 000 * s.s, s.l + 006 * s.s, s.l + 018 * s.s, s.h - 001 * s.s, s.l + 009 * s.s, s.l + 038 * s.s },
 	{ s.h - 000 * s.s, s.l + 009 * s.s, s.l + 021 * s.s, s.h - 001 * s.s, s.l + 012 * s.s, s.l + 041 * s.s },
@@ -206,13 +206,13 @@ e.j = {
 }
 
 e.k = { -- 1.24 x 0.04 x 0.04
-	{ s.l + 001 * s.s, s.l - 100 * s.s, s.l + 023 * s.s, s.l + 005 * s.s, s.l + 024 * s.s, s.l + 027 * s.s }, --e.h[1] стойка левая ближняя (для ступеньки)
-	{ s.l + 001 * s.s, s.l - 050 * s.s, s.h - 027 * s.s, s.l + 005 * s.s, s.l + 075 * s.s, s.h - 023 * s.s }, --e.h[2] стойка левая дальняя (для ступеньки)
-	{ s.h - 001 * s.s, s.l - 100 * s.s, s.l + 023 * s.s, s.h - 005 * s.s, s.l + 024 * s.s, s.l + 027 * s.s }, --e.h[3] стойка правая ближняя (для ступеньки)
-	{ s.h - 001 * s.s, s.l - 050 * s.s, s.h - 027 * s.s, s.h - 005 * s.s, s.l + 075 * s.s, s.h - 023 * s.s }, --e.h[4] стойка правая дальняя (для ступеньки)
+	{ s.l + 001 * s.s, s.l - 100 * s.s, s.l + 023 * s.s, s.l + 005 * s.s, s.l + 024 * s.s, s.l + 027 * s.s }, --e.h[1] near left pillar (for stair)
+	{ s.l + 001 * s.s, s.l - 050 * s.s, s.h - 027 * s.s, s.l + 005 * s.s, s.l + 075 * s.s, s.h - 023 * s.s }, --e.h[2] far left pillar (for stair)
+	{ s.h - 001 * s.s, s.l - 100 * s.s, s.l + 023 * s.s, s.h - 005 * s.s, s.l + 024 * s.s, s.l + 027 * s.s }, --e.h[3] near right pillar (for stair)
+	{ s.h - 001 * s.s, s.l - 050 * s.s, s.h - 027 * s.s, s.h - 005 * s.s, s.l + 075 * s.s, s.h - 023 * s.s }, --e.h[4] far right pillar (for stair)
 }
 e.l = {
-	{ s.l + 000 * s.s, s.l + 000 * s.s, s.l + 000 * s.s, s.l + 006 * s.s, s.l + 003 * s.s, s.l + 003 * s.s }, --e.i[01] левый поручень...
+	{ s.l + 000 * s.s, s.l + 000 * s.s, s.l + 000 * s.s, s.l + 006 * s.s, s.l + 003 * s.s, s.l + 003 * s.s }, --e.i[01] left handrail...
 	{ s.l + 000 * s.s, s.l + 003 * s.s, s.l + 003 * s.s, s.l + 006 * s.s, s.l + 006 * s.s, s.l + 006 * s.s },
 	{ s.l + 000 * s.s, s.l + 006 * s.s, s.l + 006 * s.s, s.l + 006 * s.s, s.l + 009 * s.s, s.l + 009 * s.s },
 	{ s.l + 000 * s.s, s.l + 009 * s.s, s.l + 009 * s.s, s.l + 006 * s.s, s.l + 012 * s.s, s.l + 012 * s.s },
@@ -245,7 +245,7 @@ e.l = {
 	{ s.l + 000 * s.s, s.l + 090 * s.s, s.l + 090 * s.s, s.l + 006 * s.s, s.l + 093 * s.s, s.l + 093 * s.s },
 	{ s.l + 000 * s.s, s.l + 093 * s.s, s.l + 093 * s.s, s.l + 006 * s.s, s.l + 096 * s.s, s.l + 096 * s.s },
 	{ s.l + 000 * s.s, s.l + 096 * s.s, s.l + 096 * s.s, s.l + 006 * s.s, s.l + 100 * s.s, s.l + 100 * s.s }, --e.i[33]
-	{ s.h - 000 * s.s, s.l + 000 * s.s, s.l + 000 * s.s, s.h - 006 * s.s, s.l + 003 * s.s, s.l + 003 * s.s }, --e.i[34] правый поручень...
+	{ s.h - 000 * s.s, s.l + 000 * s.s, s.l + 000 * s.s, s.h - 006 * s.s, s.l + 003 * s.s, s.l + 003 * s.s }, --e.i[34] right handrail...
 	{ s.h - 000 * s.s, s.l + 003 * s.s, s.l + 003 * s.s, s.h - 006 * s.s, s.l + 006 * s.s, s.l + 006 * s.s },
 	{ s.h - 000 * s.s, s.l + 006 * s.s, s.l + 006 * s.s, s.h - 006 * s.s, s.l + 009 * s.s, s.l + 009 * s.s },
 	{ s.h - 000 * s.s, s.l + 009 * s.s, s.l + 009 * s.s, s.h - 006 * s.s, s.l + 012 * s.s, s.l + 012 * s.s },
@@ -296,11 +296,11 @@ end
 
 FB.MODELS = {}
 
-FB.MODELS.A01 = { e.e[01], e.f[01] } -- одна угловая стойка
-FB.MODELS.A02 = { e.e[01], e.f[01], e.e[02], e.f[02] } -- две угловых стойки
-FB.MODELS.A03 = { e.e[01], e.f[01], e.e[02], e.f[02], e.e[03], e.f[03] } -- три угловых стойки
-FB.MODELS.A04 = { e.e[01], e.f[01], e.e[02], e.f[02], e.e[03], e.f[03], e.e[04], e.f[04] } -- четыре угловых стойки
-FB.MODELS.A05 = { e.e[05], e.e[06], e.d[05] } -- дальние перила
+FB.MODELS.A01 = { e.e[01], e.f[01] } -- one corner pillar
+FB.MODELS.A02 = { e.e[01], e.f[01], e.e[02], e.f[02] } -- two corner pillars
+FB.MODELS.A03 = { e.e[01], e.f[01], e.e[02], e.f[02], e.e[03], e.f[03] } -- three corner pillars
+FB.MODELS.A04 = { e.e[01], e.f[01], e.e[02], e.f[02], e.e[03], e.f[03], e.e[04], e.f[04] } -- four corner pillars
+FB.MODELS.A05 = { e.e[05], e.e[06], e.d[05] } -- far handrails
 
 FB.MODELS.A05DIA = {
 	{ s.l + 023 * s.s, s.l + 000 * s.s, s.l + 023 * s.s, s.l + 027 * s.s, s.h - 000 * s.s, s.l + 027 * s.s },
@@ -339,16 +339,16 @@ FB.MODELS.A05DIA = {
 	e.m[32],
 	e.m[33],
 }
-FB.MODELS.A06 = { e.e[05], e.e[06], e.d[05], e.e[03], e.f[03] } -- дальние перила и угловая правая ближняя стойка
-FB.MODELS.A07 = { e.e[05], e.e[06], e.d[05], e.e[04], e.f[04] } -- дальние перила и угловая левая ближняя стойка
-FB.MODELS.A08 = { e.e[05], e.e[06], e.d[05], e.e[03], e.f[03], e.e[04], e.f[04] } -- дальние перила и угловые ближние стойки
-FB.MODELS.A09 = { e.e[05], e.e[06], e.d[05], e.e[11], e.e[12], e.d[08] } -- дальние и левые перила
-FB.MODELS.A10 = { e.e[05], e.e[06], e.d[05], e.e[11], e.e[12], e.d[08], e.e[03], e.f[03] } -- дальние и левые перила и угловая правая ближняя стойка
-FB.MODELS.A11 = { e.e[07], e.e[08], e.d[06], e.e[11], e.e[12], e.d[08] } -- правые и левые перила
-FB.MODELS.A12 = { e.e[07], e.e[08], e.d[06], e.e[11], e.e[12], e.d[08], e.e[05], e.e[06], e.d[05] } -- правые, левые и дальние перила
+FB.MODELS.A06 = { e.e[05], e.e[06], e.d[05], e.e[03], e.f[03] } -- far handrails and near right corner pillar
+FB.MODELS.A07 = { e.e[05], e.e[06], e.d[05], e.e[04], e.f[04] } -- far handrails and near left corner pillar
+FB.MODELS.A08 = { e.e[05], e.e[06], e.d[05], e.e[03], e.f[03], e.e[04], e.f[04] } -- far handrails and near corner pillars
+FB.MODELS.A09 = { e.e[05], e.e[06], e.d[05], e.e[11], e.e[12], e.d[08] } -- far and left handrails
+FB.MODELS.A10 = { e.e[05], e.e[06], e.d[05], e.e[11], e.e[12], e.d[08], e.e[03], e.f[03] } -- far and left handrails and near right corner pillar
+FB.MODELS.A11 = { e.e[07], e.e[08], e.d[06], e.e[11], e.e[12], e.d[08] } -- right and left handrails
+FB.MODELS.A12 = { e.e[07], e.e[08], e.d[06], e.e[11], e.e[12], e.d[08], e.e[05], e.e[06], e.d[05] } -- right, left and far handrails
 FB.MODELS.A13 = {
 	e.k[01],
-	e.k[02], -- наклонный левый поручень
+	e.k[02], -- slanted left handrail
 	e.l[01],
 	e.l[02],
 	e.l[03],
@@ -385,7 +385,7 @@ FB.MODELS.A13 = {
 }
 FB.MODELS.A14 = {
 	e.k[03],
-	e.k[04], -- наклонный правый поручень
+	e.k[04], -- slanted right handrail
 	e.l[34],
 	e.l[35],
 	e.l[36],
@@ -424,7 +424,7 @@ FB.MODELS.A15 = {
 	e.k[01],
 	e.k[02],
 	e.k[03],
-	e.k[04], -- наклонный двойной поручень
+	e.k[04], -- slanted double handrail
 	e.l[01],
 	e.l[02],
 	e.l[03],
@@ -493,23 +493,23 @@ FB.MODELS.A15 = {
 	e.l[66],
 }
 
-FB.MODELS.B00 = { e.a[01] } -- нижняя плита
-FB.MODELS.B01 = { e.a[01], e.e[01], e.f[01] } -- одна угловая стойка
-FB.MODELS.B02 = { e.a[01], e.e[01], e.f[01], e.e[02], e.f[02] } -- две угловых стойки
-FB.MODELS.B03 = { e.a[01], e.e[01], e.f[01], e.e[02], e.f[02], e.e[03], e.f[03] } -- три угловых стойки
-FB.MODELS.B04 = { e.a[01], e.e[01], e.f[01], e.e[02], e.f[02], e.e[03], e.f[03], e.e[04], e.f[04] } -- четыре угловых стойки
-FB.MODELS.B05 = { e.a[01], e.e[05], e.e[06], e.d[05] } -- дальние перила
-FB.MODELS.B06 = { e.a[01], e.e[05], e.e[06], e.d[05], e.e[03], e.f[03] } -- дальние перила и угловая правая ближняя стойка
-FB.MODELS.B07 = { e.a[01], e.e[05], e.e[06], e.d[05], e.e[04], e.f[04] } -- дальние перила и угловая левая ближняя стойка
-FB.MODELS.B08 = { e.a[01], e.e[05], e.e[06], e.d[05], e.e[03], e.f[03], e.e[04], e.f[04] } -- дальние перила и угловые ближние стойки
-FB.MODELS.B09 = { e.a[01], e.e[05], e.e[06], e.d[05], e.e[11], e.e[12], e.d[08] } -- дальние и левые перила
-FB.MODELS.B10 = { e.a[01], e.e[05], e.e[06], e.d[05], e.e[11], e.e[12], e.d[08], e.e[03], e.f[03] } -- дальние и левые перила и угловая правая ближняя стойка
-FB.MODELS.B11 = { e.a[01], e.e[07], e.e[08], e.d[06], e.e[11], e.e[12], e.d[08] } -- правые и левые перила
-FB.MODELS.B12 = { e.a[01], e.e[07], e.e[08], e.d[06], e.e[11], e.e[12], e.d[08], e.e[05], e.e[06], e.d[05] } -- правые, левые и дальние перила
+FB.MODELS.B00 = { e.a[01] } -- bottom slab
+FB.MODELS.B01 = { e.a[01], e.e[01], e.f[01] } -- one corner pillar
+FB.MODELS.B02 = { e.a[01], e.e[01], e.f[01], e.e[02], e.f[02] } -- two corner pillars
+FB.MODELS.B03 = { e.a[01], e.e[01], e.f[01], e.e[02], e.f[02], e.e[03], e.f[03] } -- three corner pillars
+FB.MODELS.B04 = { e.a[01], e.e[01], e.f[01], e.e[02], e.f[02], e.e[03], e.f[03], e.e[04], e.f[04] } -- four corner pillars
+FB.MODELS.B05 = { e.a[01], e.e[05], e.e[06], e.d[05] } -- far handrails
+FB.MODELS.B06 = { e.a[01], e.e[05], e.e[06], e.d[05], e.e[03], e.f[03] } -- far handrails and near right corner pillar
+FB.MODELS.B07 = { e.a[01], e.e[05], e.e[06], e.d[05], e.e[04], e.f[04] } -- far handrails and near left corner pillar
+FB.MODELS.B08 = { e.a[01], e.e[05], e.e[06], e.d[05], e.e[03], e.f[03], e.e[04], e.f[04] } -- far handrails and near corner pillars
+FB.MODELS.B09 = { e.a[01], e.e[05], e.e[06], e.d[05], e.e[11], e.e[12], e.d[08] } -- far and left handrails
+FB.MODELS.B10 = { e.a[01], e.e[05], e.e[06], e.d[05], e.e[11], e.e[12], e.d[08], e.e[03], e.f[03] } -- far and left handrails and near right corner pillar
+FB.MODELS.B11 = { e.a[01], e.e[07], e.e[08], e.d[06], e.e[11], e.e[12], e.d[08] } -- right and left handrails
+FB.MODELS.B12 = { e.a[01], e.e[07], e.e[08], e.d[06], e.e[11], e.e[12], e.d[08], e.e[05], e.e[06], e.d[05] } -- right, left and far handrails
 
 FB.MODELS.C00 = {
 	e.b[01],
-	e.b[02], -- ступеньки
+	e.b[02], -- steps
 	e.j[01],
 	e.j[02],
 	e.j[03],
@@ -583,7 +583,7 @@ FB.MODELS.C01 = {
 	e.b[01],
 	e.b[02],
 	e.h[01],
-	e.h[02], -- ступеньки с левым поручнем
+	e.h[02], -- steps with left handrail
 	e.j[01],
 	e.j[02],
 	e.j[03],
@@ -690,7 +690,7 @@ FB.MODELS.C02 = {
 	e.b[01],
 	e.b[02],
 	e.h[03],
-	e.h[04], -- ступеньки с правым поручнем
+	e.h[04], -- steps with right handrail
 	e.j[01],
 	e.j[02],
 	e.j[03],
@@ -799,7 +799,7 @@ FB.MODELS.C03 = {
 	e.h[01],
 	e.h[02],
 	e.h[03],
-	e.h[04], -- ступеньки с обоими поручнями
+	e.h[04], -- steps with both handrails
 	e.j[01],
 	e.j[02],
 	e.j[03],
@@ -936,10 +936,10 @@ FB.MODELS.C03 = {
 	e.i[66],
 }
 
-FB.MODELS.D00 = { e.c[01], e.g[01], e.g[02], e.d[01], e.d[02], e.d[03], e.d[04] } -- люк закрытый
-FB.MODELS.D01 = { e.c[02], e.g[01], e.g[02], e.d[01], e.d[02], e.d[03], e.d[04] } -- люк открытый
+FB.MODELS.D00 = { e.c[01], e.g[01], e.g[02], e.d[01], e.d[02], e.d[03], e.d[04] } -- closed trapdoor
+FB.MODELS.D01 = { e.c[02], e.g[01], e.g[02], e.d[01], e.d[02], e.d[03], e.d[04] } -- open trapdoor
 
-FB.MODELS.S00 = { e.d[09], e.d[10], e.e[13], e.e[14] } -- открытая вертикальная лестница
+FB.MODELS.S00 = { e.d[09], e.d[10], e.e[13], e.e[14] } -- open vertical ladder
 FB.MODELS.S01 = {
 	e.d[09],
 	e.d[10],
@@ -954,8 +954,8 @@ FB.MODELS.S01 = {
 	e.d[17],
 	e.d[18],
 	e.d[19],
-} -- закрытая вертикальная лестница
-FB.MODELS.S02 = { e.d[09], e.d[10], e.d[11], e.d[12], e.d[13], e.d[06], e.d[07], e.d[08] } -- верх вертикальной лестницы
-FB.MODELS.S03 = { e.d[09], e.d[10], e.e[13], e.e[14], e.d[11], e.d[13], e.d[08], e.d[07] } -- закрытая вертикальная лестница с выходом направо
-FB.MODELS.S04 = { e.d[09], e.d[10], e.e[13], e.e[14], e.d[12], e.d[13], e.d[06], e.d[07] } -- закрытая вертикальная лестница с выходом налево
-FB.MODELS.S05 = { e.d[09], e.d[10], e.e[13], e.e[14], e.d[13], e.d[07] } -- закрытая вертикальная лестница с выходами направо и налево
+} -- closed vertical ladder
+FB.MODELS.S02 = { e.d[09], e.d[10], e.d[11], e.d[12], e.d[13], e.d[06], e.d[07], e.d[08] } -- top of vertical ladder
+FB.MODELS.S03 = { e.d[09], e.d[10], e.e[13], e.e[14], e.d[11], e.d[13], e.d[08], e.d[07] } -- closed vertical ladder with right exit
+FB.MODELS.S04 = { e.d[09], e.d[10], e.e[13], e.e[14], e.d[12], e.d[13], e.d[06], e.d[07] } -- closed vertical ladder with left exit
+FB.MODELS.S05 = { e.d[09], e.d[10], e.e[13], e.e[14], e.d[13], e.d[07] } -- closed vertical ladder with right and left exits
