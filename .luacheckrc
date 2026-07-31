@@ -5,8 +5,8 @@ globals = {
 }
 
 read_globals = {
-	-- Minetest
-	"minetest",
+	-- Luanti
+	"minetest", "core",
 	"vector",
 
 	-- mods
